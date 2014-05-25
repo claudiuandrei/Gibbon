@@ -49,7 +49,7 @@ go run server.go
 
 You will now have a Go net/http webserver running on `localhost:3000`.
 
-## Middleware & Routing
+## `Use()` - Middleware & Routing
 
 Gibbon `Use` function adds middleware to the request execution chain. Everything that acts like a `net/http` Handler can be a middleware and will run through each of them in the order added until the ResponseWriter is flushed.
 
@@ -80,7 +80,7 @@ g.Use(LastMiddleware)
 g.Run(":3000")
 ~~~
 
-## `Run()`
+## `Run()` - Server
 
 Gibbon has a convenience function called `Run`. `Run` takes an addr string identical to [http.ListenAndServe](http://golang.org/pkg/net/http#ListenAndServe).
 
